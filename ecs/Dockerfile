@@ -80,7 +80,6 @@ RUN apk upgrade --update musl \
 # Install ejabberd
 WORKDIR $HOME
 COPY --from=builder /ejabberd/runtime .
-COPY --from=builder /ejabberd/sql /usr/src/ejabberd/sql
 COPY bin/* bin/
 RUN chmod 755 bin/ejabberdctl bin/ejabberdapi bin/erl
 COPY --chown=ejabberd:ejabberd conf conf/
