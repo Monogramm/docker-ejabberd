@@ -9,7 +9,6 @@ branches:
   only:
     - develop
     - master
-    - ci/travis
 
 before_script:
   - env | sort
